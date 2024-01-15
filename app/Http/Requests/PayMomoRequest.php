@@ -19,7 +19,7 @@ class PayMomoRequest extends FormRequest
                  new PayMomoRule(),
 
             ],
-            'money' => 'required|integer|min:10000',
+            'money' => 'required|integer|min:0',
             'redirectUrl' => 'required',
         ];
     }
@@ -28,7 +28,7 @@ class PayMomoRequest extends FormRequest
             'request_type.required'  => 'Mời chọn phương thức nạp !',
             'money.required'  => 'Mời nhập số tiền !',
             'money.integer'  => 'Số tiền không hợp lệ !',
-            'money.min'  => 'Số tiền nạp tối thiểu 10.000đ !',
+            'money.min'  => 'Số tiền nạp tối thiểu 0đ !',
         ];
     }
 }
